@@ -1,0 +1,21 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+      label: ID
+      disabled: true
+      hidden: true
+    name:
+      label: Name
+      type: text
+      required: true
+    description:
+      label: Description
+      type: richeditor
+    active:
+      label: Active
+      type: switch
+      required: true
+

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Application
+
+# Model Form Field configuration
+form: $/greenimp/industries/models/application/fields.yaml
+
+# Model Class name
+modelClass: GreenImp\Industries\Models\Application
+
+# Default redirect location
+defaultRedirect: greenimp/industries/applications
+
+# Create page
+create:
+    title: Create Application
+    redirect: greenimp/industries/applications/update/:id
+    redirectClose: greenimp/industries/applications
+
+# Update page
+update:
+    title: Edit Application
+    redirect: greenimp/industries/applications
+    redirectClose: greenimp/industries/applications
+
+# Preview page
+preview:
+    title: Preview Application

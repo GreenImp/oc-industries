@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Industry
+
+# Model Form Field configuration
+form: $/greenimp/industries/models/industry/fields.yaml
+
+# Model Class name
+modelClass: GreenImp\Industries\Models\Industry
+
+# Default redirect location
+defaultRedirect: greenimp/industries/industries
+
+# Create page
+create:
+    title: Create Industry
+    redirect: greenimp/industries/industries/update/:id
+    redirectClose: greenimp/industries/industries
+
+# Update page
+update:
+    title: Edit Industry
+    redirect: greenimp/industries/industries
+    redirectClose: greenimp/industries/industries
+
+# Preview page
+preview:
+    title: Preview Industry

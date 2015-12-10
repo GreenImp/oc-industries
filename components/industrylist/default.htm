@@ -1,0 +1,14 @@
+<div class="industry-list">
+  <h2>{{ 'Industries'|_ }}</h2>
+
+  <ul class="list-group">
+    {% for industry in __SELF__.industries %}
+      <li class="list-group-item">
+        <a href="{{ __SELF__.industryPage|page({industry_id: industry.url_slug}) }}">
+          {{ industry.name }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+

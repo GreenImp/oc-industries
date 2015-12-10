@@ -1,0 +1,12 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    industryPage:
+      label: Industry page
+      type: dropdown
+      required: true
+      default: solutions-industries
+      comment: The page that displays the industry information (It must contain the 'industryPage' component and the URI must have a `industry_id` property - /path/to/industries/:industry_id)
+

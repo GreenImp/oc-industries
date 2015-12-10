@@ -1,0 +1,4 @@
+1.0.1:
+    - First version of Industries
+    - create_industries_table.php
+    - create_industry_applications_table.php
