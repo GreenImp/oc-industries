@@ -16,6 +16,10 @@ tabs:
       description:
         label: Description
         type: richeditor
+      image:
+        label: Image
+        type: mediafinder
+        mode: image
       industry:
         label: Industry
         type: relation
