@@ -13,6 +13,13 @@ tabs:
         label: Name
         type: text
         required: true
+        span: left
+      industry:
+        label: Industry
+        type: relation
+        nameFrom: name
+        required: true
+        span: right
       description:
         label: Description
         type: richeditor
@@ -20,11 +27,6 @@ tabs:
         label: Image
         type: mediafinder
         mode: image
-      industry:
-        label: Industry
-        type: relation
-        nameFrom: name
-        required: true
       active:
         label: Active
         type: switch
