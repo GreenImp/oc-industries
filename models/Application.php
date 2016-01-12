@@ -30,10 +30,10 @@ class Application extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'productAndMode'  => [
-            'GreenImp\Industries\Models\ApplicationProductMode',
-            'table' => 'greenimp_industries_application_product_mode'
-        ]
+      'productAndMode'  => [
+        'GreenImp\Industries\Models\ApplicationProductMode',
+        'table' => 'greenimp_industries_application_product_mode'
+      ]
     ];
     public $belongsTo = [
       'industry' => 'GreenImp\Industries\Models\Industry'

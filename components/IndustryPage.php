@@ -17,7 +17,7 @@ class IndustryPage extends ComponentBase
 
   public function defineProperties()
   {
-      return [];
+    return [];
   }
 
   public function onRun(){
@@ -30,5 +30,15 @@ class IndustryPage extends ComponentBase
     }else{
       $this->industry  = $query->find($industryID);
     }
+  }
+
+  public function relatedProducts(){
+    $collection = collect();
+
+    foreach($this->industry->application()->has('productAndMode')->get() as $application){
+      $collection = $collection->merge($application->productAndMode);
+    }
+
+    return $collection;
   }
 }
