@@ -1,0 +1,12 @@
+{% if __SELF__.applications|length  %}
+  {%  if __SELF__.carousel %}
+    {%  set handle = 'industries-carousel-' ~ str_random(40) %}
+
+    {%  partial 'industryApplications::carousel' handle=handle class='slider-parent' %}
+    {%  partial 'industryApplications::carousel' handle=handle type='thumbs' class='slider-nav hide-for-small-only' %}
+  {%  else %}
+    {%  partial 'industryApplications::list' %}
+  {%  endif %}
+{% else %}
+<p class="lead">No Applications found</p>
+{% endif %}

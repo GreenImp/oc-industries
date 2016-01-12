@@ -31,8 +31,9 @@ class Plugin extends PluginBase
 
   public function registerComponents(){
     return [
-      'GreenImp\Industries\Components\IndustryList' => 'industryList',
-      'GreenImp\Industries\Components\IndustryPage' => 'industryPage'
+      'GreenImp\Industries\Components\IndustryList'         => 'industryList',
+      'GreenImp\Industries\Components\IndustryPage'         => 'industryPage',
+      'GreenImp\Industries\Components\IndustryApplications' => 'industryApplications'
     ];
   }
 
