@@ -3,7 +3,7 @@
 use Model;
 
 /**
- * Contact Model
+ * Application Model
  * @link https://octobercms.com/docs/database/model
  */
 class Application extends Model
@@ -29,7 +29,12 @@ class Application extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [];
+    public $hasMany = [
+        'productAndMode'  => [
+            'GreenImp\Industries\Models\ApplicationProductMode',
+            'table' => 'greenimp_industries_application_product_mode'
+        ]
+    ];
     public $belongsTo = [
       'industry' => 'GreenImp\Industries\Models\Industry'
     ];

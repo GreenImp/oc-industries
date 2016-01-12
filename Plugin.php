@@ -9,20 +9,25 @@ use System\Classes\PluginBase;
  */
 class Plugin extends PluginBase
 {
-    /**
-     * Returns information about this plugin.
-     *
-     * @return array
-     */
-    public function pluginDetails()
-    {
-        return [
-            'name'        => 'greenimp.industries::lang.app.name',
-            'description' => 'No description provided yet...',
-            'author'      => 'GreenImp',
-            'icon'        => 'icon-cubes'
-        ];
-    }
+  /**
+   * @var array Plugin dependencies
+   */
+  public $require = ['GreenImp.TelcoProducts'];
+
+  /**
+   * Returns information about this plugin.
+   *
+   * @return array
+   */
+  public function pluginDetails()
+  {
+    return [
+      'name'        => 'greenimp.industries::lang.app.name',
+      'description' => 'No description provided yet...',
+      'author'      => 'GreenImp',
+      'icon'        => 'icon-cubes'
+    ];
+  }
 
   public function registerComponents(){
     return [

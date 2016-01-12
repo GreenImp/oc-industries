@@ -1,0 +1,17 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+productAndMode:
+  label: Product/Mode
+  emptyMessage: No products/modes
+  deferredBinding: true
+  view:
+    list: $/greenimp/industries/models/applicationproductmode/columns.yaml
+    toolbarButtons: create|delete
+    showSearch: true
+  manage:
+    list: $/greenimp/industries/models/applicationproductmode/columns.yaml
+    recordsPerPage: 10
+    showSearch: true
+    form: $/greenimp/industries/models/applicationproductmode/fields.yaml
