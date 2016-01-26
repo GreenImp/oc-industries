@@ -17,12 +17,15 @@ class ApplicationProductMode extends Model
   /**
    * @var array Guarded fields
    */
-  protected $guarded = ['*'];
+  protected $guarded = [];
 
   /**
    * @var array Fillable fields
    */
-  protected $fillable = [];
+  protected $fillable = [
+    'product_id',
+    'product_mode_id'
+  ];
 
   /**
    * @var array Relations

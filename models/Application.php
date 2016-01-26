@@ -18,12 +18,18 @@ class Application extends Model
     /**
      * @var array Guarded fields
      */
-    protected $guarded = ['*'];
+    protected $guarded = [];
 
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+      'industry_id',
+      'name',
+      'description',
+      'image',
+      'active'
+    ];
 
     /**
      * @var array Relations
