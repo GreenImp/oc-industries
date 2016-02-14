@@ -2,7 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use GreenImp\Industries\Models\Industry;
-use GreenImp\Industries\Models\Application;
+use GreenImp\TelcoProducts;
 
 class IndustryApplications extends ComponentBase
 {
@@ -44,6 +44,18 @@ class IndustryApplications extends ComponentBase
 
     if($this->industry){
       $this->applications = $this->industry->application()->isActive()->get();
+    }else{
+      // no industry - check for product and mode
+      $mode     = TelcoProducts\Classes\Menu::getProductModeFromIdOrSlug($this->param('product_mode_id'));
+      $product  = TelcoProducts\Classes\Menu::getProductFromIdOrSlug($this->param('product_id'));
+
+      if(!is_null($mode) && !is_null($product)){
+        $this->applications = collect();
+
+        foreach($product->applicationAndMode()->hasMode($mode->id)->get() as $applicationMode){
+          $this->applications->push($applicationMode->application);
+        }
+      }
     }
 
 

@@ -43,4 +43,8 @@ class ApplicationProductMode extends Model
   public $morphMany = [];
   public $attachOne = [];
   public $attachMany = [];
+
+  public function scopeHasMode($query, $modeID){
+    return $query->where('product_mode_id', '=', $modeID);
+  }
 }

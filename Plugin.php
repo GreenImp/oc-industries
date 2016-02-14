@@ -110,5 +110,12 @@ class Plugin extends PluginBase
         return \GreenImp\Industries\Classes\Industries::resolveMenuItem($item, $url, $theme);
       }
     });
+
+    \GreenImp\TelcoProducts\Models\Product::extend(function($model){
+      $model->hasMany['applicationAndMode'] = [
+        'GreenImp\Industries\Models\ApplicationProductMode',
+        'table' => 'greenimp_industries_application_product_mode'
+      ];
+    });
   }
 }
