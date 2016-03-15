@@ -66,13 +66,13 @@ class Plugin extends PluginBase
             'label'       => 'greenimp.industries::lang.general.industries',
             'url'         => Backend::url('greenimp/industries/industries'),
             'icon'        => 'icon-cubes',
-            'permissions' => ['greenimp.offices.manage_industries']
+            'permissions' => ['greenimp.industries.manage_industries']
           ],
           'applications'  => [
             'label'       => 'greenimp.industries::lang.general.applications',
             'url'         => Backend::url('greenimp/industries/applications'),
             'icon'        => 'icon-plug',
-            'permissions' => ['greenimp.offices.manage_applications'],
+            'permissions' => ['greenimp.industries.manage_applications'],
             'order'       => 500
           ]
         ]
