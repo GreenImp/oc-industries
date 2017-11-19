@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  product:
+    label: Product
+    type: relation
+    nameFrom: name
+    emptyOption: -- select --
+    required: true
+    span: left
+  productMode:
+    label: Mode
+    comment: Select which of the product's modes this application relates to.
+    type: relation
+    nameFrom: name
+    emptyOption: -- select --
+    span: right

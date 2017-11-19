@@ -17,7 +17,7 @@ class IndustryPage extends ComponentBase
 
   public function defineProperties()
   {
-      return [];
+    return [];
   }
 
   public function onRun(){
@@ -26,9 +26,19 @@ class IndustryPage extends ComponentBase
     $query  = Industry::isActive();
 
     if(!is_numeric($industryID) || ($industryID < 1)){
-      $this->industry  = $query->where('url_slug', $industryID)->firstOrFail();
+      $this->industry  = $query->where('url_slug', $industryID)->first();
     }else{
-      $this->industry  = $query->findOrFail($industryID);
+      $this->industry  = $query->find($industryID);
     }
+  }
+
+  public function relatedProducts(){
+    $collection = collect();
+
+    foreach($this->industry->application()->has('productAndMode')->get() as $application){
+      $collection = $collection->merge($application->productAndMode);
+    }
+
+    return $collection;
   }
 }

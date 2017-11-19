@@ -2,25 +2,38 @@
 #  Form Field Definitions
 # ===================================
 
-fields:
-    id:
-      label: ID
-      disabled: true
-      hidden: true
-    name:
-      label: Name
-      type: text
-      required: true
-    description:
-      label: Description
-      type: richeditor
-    industry:
-      label: Industry
-      type: relation
-      nameFrom: name
-      required: true
-    active:
-      label: Active
-      type: switch
-      required: true
+tabs:
+  defaultTab: Details
+  fields:
+      id:
+        label: ID
+        disabled: true
+        hidden: true
+      name:
+        label: Name
+        type: text
+        required: true
+        span: left
+      industry:
+        label: Industry
+        type: relation
+        nameFrom: name
+        required: true
+        span: right
+      description:
+        label: Description
+        type: richeditor
+      image:
+        label: Image
+        type: mediafinder
+        mode: image
+      active:
+        label: Active
+        type: switch
+        required: true
 
+      productAndMode:
+        label: Related Products/Modes
+        type: partial
+        path: $/greenimp/industries/models/applicationproductmode/_product_and_mode_field.htm
+        tab: Products

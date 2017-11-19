@@ -19,12 +19,17 @@ class Industry extends Model
     /**
      * @var array Guarded fields
      */
-    protected $guarded = ['*'];
+    protected $guarded = [];
 
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+      'name',
+      'description',
+      'sort_order',
+      'active'
+    ];
 
     /**
      * @var array Relations

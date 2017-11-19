@@ -15,6 +15,7 @@ class CreateIndustryApplicationsTable extends Migration
           $table->integer('industry_id')->unsigned();
           $table->string('name');
           $table->longText('description')->nullable();
+          $table->string('image', 2000)->nullable();
           $table->boolean('active')->default(false);
           $table->timestamps();
 

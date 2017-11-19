@@ -1,0 +1,23 @@
+<div data-industries-slider data-handle="{{ handle }}" class="{{ class }}">
+  {% for application in __SELF__.applications %}
+    <div>
+      {%  if type == 'thumbs' %}
+        <img src="{{ application.image|media }}" alt="{{ application.name }}">
+      {% else %}
+      <div class="row">
+        {% if application.image %}
+          <figure class="column medium-4 text-center">
+            <img src="{{ application.image|media }}" alt="{{ application.name }}">
+          </figure>
+        {% endif %}
+
+        <div class="column {% if application.image %}medium-8{% endif %} small-only-text-center">
+          <h3>{{ application.name }}</h3>
+
+          {{ application.description|raw }}
+        </div>
+      </div>
+      {%  endif %}
+    </div>
+  {% endfor %}
+</div>
